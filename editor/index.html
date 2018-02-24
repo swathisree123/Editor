@@ -1,0 +1,286 @@
+<html>
+<head>
+	<title>codeMirror</title>
+	<link rel="stylesheet" type="text/css" href="E:\editor\pulgin\codemirror\lib\codemirror.css">
+	<link rel="stylesheet" type="text/css" href="E:\editor\pulgin\codemirror\theme\bespin.css">
+	<script type="text/javascript" src="js/jquery-min.js"></script>
+	<script type="text/javascript" src="pulgin/codemirror/lib/codemirror.js"></script>
+
+	<link rel="stylesheet" href="http://codemirror.net/theme/3024-day.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<script type="text/javascript" src = "E:\editor\pulgin\codemirror\mode\javascript\javascript.js"></script>
+	<script type="text/javascript" src = "E:\editor\pulgin\codemirror\mode\php\php.js"></script>
+	<script type="text/javascript" src = "E:\editor\pulgin\codemirror\mode\perl\perl.js"></script>
+	
+
+	<style>
+	a{
+	color:#8096AA;
+	text-decoration: none;
+	padding: 16px;
+    font-size: 16px;
+	}
+	
+	/*Dropdown */
+	.dropbtn {
+    /*background-color: #4CAF50;*/
+    color:#8096AA;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+	}
+
+	.dropdown {
+    position: relative;
+    display: inline-block;
+	}
+
+	.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f4f4f4;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	}
+
+	.dropdown-content a {
+    color:#8096AA ;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	}
+
+	.dropdown-content a:hover {background-color: #ddd}
+
+	.dropdown:hover .dropdown-content {
+    display: block;
+	}
+
+	/*Editor shadows*/
+	.CodeMirror{
+  	border: 1px  solid #8096AA;
+  	box-shadow: 1px 1px 5px  #8096AA;
+  	}
+
+  	.files{
+  	 box-shadow: 1px 1px 10px #8096AA;
+  	 font-style: oblique;
+  	 font-size: 18px;
+  	}
+
+  	.popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 280px;
+  left: 50%;
+  margin-left: -150px;
+  height: 180px;
+  top: 50%;
+  margin-top: -100px;
+  z-index: 20;
+}
+
+
+
+#popup1::after,#popup2::after , #popup3::after ,#popup4::after{
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0);
+  z-index: -2;
+}
+
+#cancel,#delete,#rename,#save,#upload {
+    background-color: #8096AA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    height:15%;
+    margin-left: 27px;
+    margin-top: 25px;
+
+}
+.fpwd
+{
+  margin-left: 125px;
+}
+
+
+</style>
+
+<script>
+$ = function(id) {
+  return document.getElementById(id);
+}
+
+var show = function(id) {
+	$(id).style.display ='block';
+}
+var hide = function(id) {
+	$(id).style.display ='none';
+}
+</script>
+	
+
+ </head>
+<body>
+
+	<!--editor-->
+
+	<div id = "editor"></div>
+	<script type="text/javascript">
+	var myCodeMirror = CodeMirror(document.getElementById("editor"), {
+	   
+  	  lineNumbers : true,
+  	  undoDepth : 10,
+      });
+	myCodeMirror.setSize(1100,400);
+	</script>
+
+
+	!!Output Here!!
+	<!--Output Screen # no edit access # Only display-->
+
+	<div id = "output">
+	<script type="text/javascript">
+	var myOutput = CodeMirror(document.getElementById("output"), {
+	  value:""
+	  //readOnly:'nocursor'
+  	 });
+	myOutput.setSize(1100,190);
+	</script>
+	</div>
+
+	<!--SideMenu-->
+	
+	<div class="sidebar">
+
+	<div class="exec" style="position:absolute;top:1px;right:160px;">
+	<div class="dropdown">
+	<div class="dropbtn">Execute</div>
+  	<div class="dropdown-content">
+    <a href ="#"></a>
+    <a href="#">CSS</a>
+    <a href="#">Haskel</a>
+    <a href="#">HTML</a>
+    <a href="#">Javascript</a>
+    <a href="#">php</a>
+    <a href="#">Perl</a>
+    <a href="#">Ruby</a>
+    <a href="#">Python</a>
+    <a href="#">R</a>
+    <a href="#">XML</a>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div style="position: absolute;top:1px;right:120px;">
+	<div class="dropdown">
+	<div class="dropbtn">File</div>
+  	<div class="dropdown-content">
+    <a href ="#">Create File</a>
+    <a href="#" onclick="show('popup4')">Upload File</a>
+    <a href="#">Download File</a>
+    <a href="#" onclick="show('popup3')">Save File</a>
+    <a href="#" onclick="show('popup1')">Delete File</a>
+    <a href="#" onclick="show('popup2')" >Rename File</a>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="home" style="position:absolute;top:17px;right:63px;">
+	<a href="">Home</a>
+	</div>
+
+	<div class="help" style="position:absolute;top:17px;right:10px;">
+	<a href="">Help</a>
+	</div>
+
+	</div>
+
+
+
+	<!-- Files-->
+  	<div class ="files" style="width:207px;height: 580px;border:1px solid #8096AA;
+  	background-color: #f4f4f4; top : 40px; position: absolute;
+  	 right: 15px ; color: #445666 ; overflow: auto;">
+	<ul style="list-style: none">
+		<li>+ Root</li>
+			<ul style="list-style: none">
+			<li>Sample1</li>
+			<li>Sample2</li>
+			</ul>
+		<li>+ Root2</li>
+			<ul style="list-style: none">
+			<li>Sample3</li>
+			<li>Sample4</li>
+			</ul>
+	</ul>
+	</div>
+
+<!--File popups-->
+
+<div class="popup" id="popup1" style="width:250px; height: 150px;
+border:1px solid #8096AA;position:fixed ;top:250px;left:700px;box-shadow: 1px 1px 10px #8096AA;">
+  <a href="#" onclick="hide('popup1')">&times;</a><br><br>
+  <p>&nbsp;&nbsp;&nbsp;Are you sure to delete this item?</p>
+  <button id="delete">Delete</button>
+  <button id="cancel" onclick="hide('popup1')">Cancel</button>
+  </div>
+ 
+
+
+
+<div class="popup" id="popup2" style="width:300px; height: 200px;
+border:1px solid #8096AA;position:fixed ;top:250px;left:700px;box-shadow: 1px 1px 10px #8096AA;">
+<a href="#" onclick="hide('popup2')">&times;</a><br><br>
+ <p style="padding: 10px;">Are you sure to rename this item?</p>
+<form>
+ <label  style="padding: 8px"><b>Rename&nbsp;</b></label>
+ <input id="renm" type="text" placeholder="Rename File" required style="width: 200px;
+    height:30px;padding: 4px;box-shadow: 1px 1px 10px #8096AA;">
+ <button id="rename">Rename</button>
+  <button id="cancel" onclick="hide('popup2')">Cancel</button> 
+  </form>
+</div>
+
+
+
+
+<div class="popup" id="popup3" style="width:280px; height: 200px;
+border:1px solid #8096AA;position:fixed ;top:250px;left:700px;box-shadow: 1px 1px 10px #8096AA;">
+<a href="#" onclick="hide('popup3')">&times;</a><br><br>
+ <p style="padding: 10px;">Are you sure to save this item?</p>
+<form>
+ <label  style="padding: 8px"><b>Save&nbsp;</b></label>
+ <input id="renm" type="text" placeholder="File name" required style="width: 200px;
+    height:30px;padding: 4px;box-shadow: 1px 1px 10px #8096AA;">
+ <button id="save">Save</button>
+  <button id="cancel" onclick="hide('popup3')">Cancel</button> 
+  </form>
+</div>
+
+
+<div class="popup" id="popup4" style="width:210px; height: 180px;
+border:1px solid #8096AA;position:fixed ;top:250px;left:700px;box-shadow: 1px 1px 10px #8096AA;">
+<a href="#" onclick="hide('popup4')">&times;</a><br><br>
+ <p style="padding: 5px;">Upload from PC</p>
+<form>
+  <input type="file" name="upload">
+  <button id="upload">Upload</button>
+  <button id="cancel" onclick="hide('popup4')">Cancel</button> 
+  
+</div>
+
+</body>
+</html>
+
+

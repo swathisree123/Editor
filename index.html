@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Craving</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
+<style>
+.popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 280px;
+  left: 50%;
+  margin-left: -150px;
+  height: 180px;
+  top: 50%;
+  margin-top: -100px;
+  z-index: 20;
+}
+
+
+#popup2::after,#popup3::after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0);
+  z-index: -2;
+}
+
+
+
+#submit {
+    background-color: #8096AA;
+    color: white;
+    padding: 8px 150px;
+    margin: 10px 35px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+}
+
+#submit2 {
+    background-color: #8096AA;
+    color: white;
+    padding: 8px 150px;
+    margin: 10px 35px;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+}
+
+
+.fpwd
+{
+  margin-left: 125px;
+}
+</style>
+
+<script>
+$ = function(id) {
+  return document.getElementById(id);
+}
+
+var show = function(id) {
+  $(id).style.display ='block';
+}
+var hide = function(id) {
+  $(id).style.display ='none';
+}
+</script>
+</head>
+
+
+
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="clear"> 
+    <!-- ################################################################################################ -->
+    
+    <div class="fl_right">
+      <ul class="nospace inline pushright">
+        <li><a href="#" onclick="show('popup2')">Login</a></li>
+        
+        <li><a href="#" onclick="show('popup3')">Register</a></li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <a href="index.html"><h1>Craving</h1></a>
+    </div>
+    <div class="fl_right">
+      <ul class="nospace inline pushright">
+      <h6> Strong desire for <i>PROGRAMMING</i></h6>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1 bgded" style="background-image:url('images/demo/backgrounds/03.jpg')">
+  <div class="overlay">
+    <section id="pageintro" class="clear"> 
+      <!-- ################################################################################################ -->
+      <div class="one_half first">
+        <h2 class="font-x3 btmspace-50">Collecting different platforms together.</h2>
+        <p>It really makes sense to love what we do! Whether our career or something more personal is what we find most passionate in our lives, it is always a great idea to check in once in a while and remind ourselves what drives this passion.</p>
+        <p><a class="btn" href="E:\editor\index.html" target="_blank">CLICK HERE</a></p>
+      </div>
+      <div class="one_half"><img src="images/demo/pgmgminds.png" alt=""></div>
+      <!-- ################################################################################################ -->
+    </section>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <nav id="mainav" class="clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      
+       <li><a href="https://www.completecsharptutorial.com/basic" target="_blank">C#</a></li>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <li><a href="http://www.studytonight.com/java" target="_blank">Java</a></li>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML</a></li>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="https://www.codecademy.com/en/tracks/javascript" target="_blank">JavaScript</a></li>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="https://www.w3schools.com/php" target="_blank">PHP</a></li>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="https://learn.perl.org/tutorials" target="_blank">Perl</a></li>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="https://www.ruby-lang.org/en/documentation/quickstart" target="_blank">Ruby</a></li>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+      <li><a href="http://www.learnpython.org" target="_blank">Python</a></li>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li><a href="http://www.mysqltutorial.org" target="_blank">MYSQL</a></li>
+      
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-80">
+      <h2>Basic programming languages you should know</h2>
+      <p>“The most important property of a program is whether it accomplishes the intention of its user.”</p>
+    </div>
+    <div class="group">
+      <article class="one_third first btmspace-50">
+        <h2 class="uppercase font-x1 btmspace-30"><a href="#">C,C++</a></h2>
+        <p>Being the oldest, it should be learned first when you start up, and it is mainly applied in forming different software.C++ is a bit more progressive than C, and utilized immensely in forming hardware speeded games.Known to be the strongest language, C++ is applied in vital operating systems, such as Windows.</p>
+      </article>
+      <article class="one_third btmspace-50">
+        <h2 class="uppercase font-x1 btmspace-30"><a href="#">Java</a></h2>
+        <p>Java is considered as the perfect language for the developers and programmers to learn. Currently, it is the top-most programming language and has grabbed the highest position with Android OS.</p>
+      </article>
+      <article class="one_third btmspace-50">
+        <h2 class="uppercase font-x1 btmspace-30"><a href="#">JavaScript</a></h2>
+        <p>JavaScript is extremely functional as this language can immensely assist you in generating the communication for your website. You can utilize various in style frameworks in JavaScript for constructing the superb user interface.</p>
+      </article>
+      <article class="one_third first">
+        <h2 class="uppercase font-x1 btmspace-30"><a href="#">Perl</a></h2>
+        <p>Perl is also a well-accepted programming language that offers distinct tools for various obscure setbacks such as system programming. Though this programming language is a bit puzzling.</p>
+      </article>
+      <article class="one_third">
+        <h2 class="uppercase font-x1 btmspace-30"><a href="#">C#</a></h2>
+        <p> you can go ahead in knowing about C# language.C# is actually the prime language for Microsoft applications and services. While executing with .Net and ASP technologies, you are required to be familiar with the C# accurately.</p>
+      </article>
+      <article class="one_third">
+        <h2 class="uppercase font-x1 btmspace-30"><a href="#">Python</a></h2>
+        <p>For becoming skilled at all-in-one language, you should begin learning Python language that has the ability to expand web apps, data analysis, user interfaces, and much more, and frameworks are also available for these tasks.</p>
+      </article>
+     </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded" style="background-image:url('images/demo/backgrounds/03.jpg')">
+  <div class="overlay">
+    <div class="container clear"> 
+      <!-- ################################################################################################ -->
+      <h6 class="nospace font-x3 center btmspace-50">IT professionals never die...<a class="dk-blue" href="#">They jus go <i>OFFLINE</i></a></h6>
+      <div class="flexslider carousel">
+        <ul class="carousel-items center">
+          <li>
+            <blockquote>It's hard enough to find an error in your code,when you'r looking for it;its even harder when you've assumed your code is error free.</blockquote>
+            <figure><img class="circle btmspace-15" src="images/demo/steveMcConnell.jpg" alt="">
+              <figcaption><span class="bold">Steve McConnell</span><br>
+                <!--<em>Position, Company Name</em>--></figcaption>
+            </figure>
+          </li>
+          <li>
+            <blockquote>Measuring programming progress by lines of code is like measuring aircraft building progress by weight.</blockquote>
+            <figure><img class="circle btmspace-15" src="images/demo/billGates.jpg" alt="">
+              <figcaption><span class="bold">Bill Gates</span><br>
+                <!--<em>Position, Company Name</em>--></figcaption>
+            </figure>
+          </li>
+          <li>
+            <blockquote>Programming is the art of telling another human being what one wants the computer to do.
+            A programmer who viwes himself as an artist will do it better.</blockquote>
+            <figure><img class="circle btmspace-15" src="images/demo/donaldKnuth.jpg" alt="">
+              <figcaption><span class="bold">Donald Knuth</span><br>
+                <!--<em>Position, Company Name</em>--></figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+</div>
+
+<!--Login -->
+<div class="popup" id="popup2" style="width:380px; height: 260px;
+border:1px solid #8096AA;position:fixed ;top:250px;left:600px;box-shadow: 1px 1px 10px #8096AA;">
+  <form>
+  <a href="#" onclick="hide('popup2')">&times;</a><br><br>
+  <div>
+  <label for="uname" style="padding: 15px"><b>Username&nbsp;</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required style="width: 250px;
+    height:30px;padding: 4px;box-shadow: 1px 1px 10px #8096AA;">
+    <br><br><br>
+    <label for="pwd" style="padding: 15px"><b>Password&nbsp;</b></label>
+    <input type="password" placeholder="Enter Password" name="pwd" required style="width: 250px;
+    height:30px;padding: 4px;box-shadow: 1px 1px 10px #8096AA;">
+    <br><br>
+    <button id="submit" type="submit">Login</button>
+    </div>
+    <br>
+  <div>
+    <span class="fpwd">
+    <a href="#"  style="text-decoration: none;">Forgot password?</a>
+    </span>
+  </div>
+</form>
+</div>
+
+<!--Registration -->
+<div class="popup" id="popup3" style="width:450px; height: 400px;
+border:1px solid #8096AA;position:fixed ;top:170px;left:600px;box-shadow: 1px 1px 10px #8096AA;">
+  <form>
+  <a href="#" onclick="hide('popup3')">&times;</a><br><br>
+  <div>
+  <label for="fname" style="padding: 15px"><b>Firstname&nbsp;</b></label>
+    <input type="text" placeholder="Enter Firstname" name="firstname" required style="width: 300px;
+    height:30px;padding: 4px;box-shadow: 1px 1px 10px #8096AA;">
+    <br><br><br>
+    <label for="lname" style="padding: 15px"><b>Lastname&nbsp;</b></label>
+    <input type="text" placeholder="Enter Lastname" name="lastname" required style="width: 300px;
+    height:30px;padding: 4px;box-shadow: 1px 1px 10px #8096AA;">
+    <br><br><br>
+    <label for="email" style="padding: 15px"><b>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+    <input type="text" placeholder="Enter email" name="email" required style="width: 300px;
+    height:30px;padding: 4px;box-shadow: 1px 1px 10px #8096AA;">
+    <br><br><br>
+    <label for="pwd1" style="padding: 15px"><b>Password&nbsp;</b></label>
+    <input type="password" placeholder="Enter password" name="pwd1" required style="width: 300px;
+    height:30px;padding: 4px;box-shadow: 1px 1px 10px #8096AA;">
+    <br><br><br>
+    <label for="pwd1" style="padding: 15px"><b>Confirm&nbsp;&nbsp;</b></label>
+    <input type="password" placeholder="ReEnter password" name="pwd2" required style="width: 300px;
+    height:30px;padding: 4px;box-shadow: 1px 1px 10px #8096AA;">
+    <br><br>
+  <button id="submit2" type="submit">Submit</button>
+  </div>
+   
+</form>
+</div>
+
+<!--Back to Top-->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="layout/scripts/jquery.flexslider-min.js"></script>
+</body>
+</html>
